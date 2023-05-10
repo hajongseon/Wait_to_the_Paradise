@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>별로야</title>
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static '/wtp/bootstrap/bootstrap.min.css' %}" media="screen">
     <link rel="stylesheet" href="{% static '/wtp/bootstrap/bootstrap.min.css.map' %}" media="screen">
@@ -12,25 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static '/wtp/bootstrap/main.css' %}">
-
-    <title>wait paradise</title>
-
 </head>
 <body>
-
-  <header class="fixed">
     <!-- navbar  -->
       {% include 'wtp_open/navbar.html' %}
-  </header>
-    <div class="bg">
-        {% block main_area %}
-        {% endblock %}
-        <div class="dd">
-          <a href="depression"><button class="learn-more">우울해</button></a>
-          <a href="bad"><button class="learn-more">별로야</button ></a>
-          <a href="fine"><button class="learn-more">괜찮아</button ></a>
-          <a href="good"><button class="learn-more">좋아</button ></a>
-        </div>
-    </div>
+     <h1 style="width:500px; text-align:center; margin:0 auto;">별로야 나만의별로</h1>
 </body>
 </html>
