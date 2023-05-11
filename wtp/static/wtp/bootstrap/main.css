@@ -45,7 +45,8 @@ a {
     border-radius: 10px;
 }
 
-#select_hover:hover {
+
+.select_hover:hover {
     background:rgba(248, 249, 250);
     opacity: 0.1s;
     cursor:pointer !important;
@@ -53,8 +54,9 @@ a {
     color: black;
 }
 
-#flex-columns {
-    flex-direction : columns;
+.flex-columns-1 {
+    flex-wrap: wrap !important;
+    flex-direction : columns !important;
 }
 
 .grid-sub {
