@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik:700&display=swap');
 HTML SCSSResult Skip Results Iframe
 EDIT ON
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&family=Roboto+Slab:wght@900&family=Roboto:wght@300&display=swap');
 /* .bg{
   background: #fff;;  
 } 
@@ -19,17 +20,34 @@ $pink-shadow: #ffe3e2; */
   }
 }
 
-/* body {
-  font-family: 'Rubik', sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  min-height: 100vh;
-  background: #fff;
-} */
+.select-container {
+    height:600px;
+}
+
+.row-box {
+    text-align:center;
+    height: 500px;
+}
+
+.select-mini {
+    text-align: center;
+}
+
+.text-box {
+    display: flex;
+    justify-content : center;
+    align-items: center;
+}
+
+.h-200 {
+    height: 240px;
+}
+
+.auto {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
 
 button {
   position: relative;
@@ -85,85 +103,22 @@ button {
   }
 }
 
+.my-6 {
+    margin-top: 7rem !important;
+    margin-bottom: 7rem !important;
+}
+
+.font {
+   font-family: 'Hi Melody', cursive;
+    font-family: 'Roboto Slab', serif;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.bd-gray {
+    border: 1px solid g;
+}
 /* end  */
 
-.fixed {
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-}
-
-.icon {
-    font-size: 16px;
-}
-.dd {
-    position: absolute;
-    left: 19%;
-    top: 25%;
-    /* border: 3px solid red; */
-    width: 1200px;
-    height: 500px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.box {
-    background: white;
-    line-height: 80px;
-    text-align: center;
-    width: 100px;
-    height: 80px;
-    /* background: #333; */
-    background: rgb(247, 245, 234);
-    /* color: white; */
-    color: black;
-    border-radius: 20px;
-    outline: none !important;
-    transition: ease 0.3s;
-    box-shadow: 3px 3px 3px lightgrey;
-    border: none;
-    /* opacity: 0.8; */
-}
-
-.box:hover {
-    width: 110px;
-    height: 90px;
-    line-height: 90px;
-    border: none;
-    box-shadow: none;
-    transition: ease 0.3s;
-    background-color: rgb(247, 245, 234);
-    cursor: pointer;
-    color: black;
-    /* opacity: 1; */
-    /* box-shadow: 0px 3px 0px white; */
-  }
-
-  .box:active {
-      opacity: 0.8;
-  }
 
 
-.bg {
-    position: relative;
-    background-image: url(magic.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-}
-
-.bg::before {
-    content: "";
-    opacity: 0.2;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    background-color: #fff;
-}
-
-img {
-    opacity: 0.8;
-}
