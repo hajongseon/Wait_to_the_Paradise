@@ -89,7 +89,7 @@ button {
 .font {
     font-family: 'Roboto Slab' , serif;
     font-size: 1.8rem;
-    text-shadow: 2px 4px 2px gray;
+    text-shadow: 1px 1px 1px gray;
 }
 
 .fixed {

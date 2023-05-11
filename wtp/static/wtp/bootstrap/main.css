@@ -46,9 +46,9 @@ button {
     color: #382b22;
     text-transform: uppercase;
     padding: 1.25em 2em;
-    background: #fff0f0;
     border: 2px solid #b18597;
     border-radius: 0.75em;
+    background: #fff0f5;
     transform-style: preserve-3d;
     transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
     &::before {
@@ -86,11 +86,6 @@ button {
 }
 
 /* end  */
-.font {
-    font-family: 'Roboto Slab' , serif;
-    font-size: 1.8rem;
-    text-shadow: 2px 4px 2px gray;
-}
 
 .fixed {
     position: fixed;
