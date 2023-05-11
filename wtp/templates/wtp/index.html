@@ -26,26 +26,31 @@
         {% block main_area %}
         {% endblock %}
         <div class="row-box row">
-            <div class="text-box col-5 text-center">
+            <div class="text-box col-5 text-center b-white">
                 <p class="p-sm-5 text-center font"><i class="fas fa-quote-left"></i> 당신의 기분을<br>선택해주세요 <i class="fas fa-quote-right"></i></p>
-
             </div>
 
             <div class="col-7 text-center">
                 <div class="row">
-                    <div class="btn-m h-200 col-6 auto bd-gray">
-                      <a href="depression"><button class="learn-more">우울해요</button></a>
-                    </div>
-                    <div class="h-200 col-6 auto bd-gray">
-                        <a href="bad"><button class="learn-more">별로에요</button ></a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="h-200 col-6 auto bd-gray">
-                        <a href="fine"><button class="learn-more">괜찮아요</button ></a>
-                    </div>
-                    <div class="h-200 col-6 auto bd-gray">
-                        <a href="good"><button class="learn-more">좋았어요</button ></a>
+                    <div class="d-sm-grid grid-sub">
+                        <a class="font" href="depression">
+                            <div id="select_hover" class="btn-m h-200 col-6 auto bd-gray b-white">
+                                <div id="flex-columns">
+                                    <i class="fas fa-sad-tear font"></i>
+                                    우울해요
+                                </div>
+                            </div>
+                        </a>
+                        <div class="h-200 col-6 auto bd-gray b-white">
+                            <i class="fa-light fa-face-expressionless"></i>
+                            <a href="bad"><button class="learn-more">별로에요</button ></a>
+                        </div>
+                        <div class="h-200 col-6 auto bd-gray b-white">
+                            <a href="fine"><button class="learn-more">괜찮아요</button ></a>
+                        </div>
+                        <div class="h-200 col-6 auto bd-gray b-white">
+                            <a href="good"><button class="learn-more">좋았어요</button ></a>
+                        </div>
                     </div>
                 </div>
             </div>
