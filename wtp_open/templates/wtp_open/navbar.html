@@ -8,14 +8,14 @@
 
           <ul class="navbar-nav ms-auto">
             <li class="nav-item px-3">
-              <a class="text-decoration-none icon" href="#" style="color:#2C3E50;">
+              <a class="text-decoration-none icon" href="#" style="color:#2C3E50;" data-bs-toggle="modal" data-bs-target="#SignUpModal">
                 <i class="fas fa-user-plus"></i>
                  <!-- 회원가입 -->
               </a>
             </li>
             <li class="nav-item" style="color:#2C3E50;"> | </li>
             <li class="nav-item px-3 text-white">
-              <a class="text-decoration-none icon" href="#" style="color:#2C3E50;">
+              <a class="text-decoration-none icon" href="#" style="color:#2C3E50;" data-bs-toggle="modal" data-bs-target="#LoginModal">
                 <i class="fas fa-sign-in-alt"></i>
                  <!-- 로그인 -->
               </a>
@@ -31,3 +31,58 @@
         </div>
       </div>
     </nav>
+
+<!-- Modal Sign up -->
+<div class="modal" id="SignUpModal" tabindex="-1" aria-labelledby="SignUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="SignUpModalLabel">Sign Up</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="button" class="btn btn-outline-warning btn-md mb-2 btn-block"><i
+                                        class="far fa-envelope"></i> Sign Up with E-mail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Login -->
+<div class="modal" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="LoginModalLabel">Login</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="button" class="btn btn-outline-danger btn-md mb-3 btn-block"><i
+                                class="fab fa-google"></i> Log in with Google
+                        </button>
+                        <button type="button" class="btn btn-outline-success btn-md mb-3 btn-block"><i
+                                class="far fa-envelope"></i> Log in with E-mail
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
