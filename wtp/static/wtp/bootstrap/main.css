@@ -146,10 +146,18 @@ button {
     font-weight: 400;
 }
 
-.bd-gray {
-    border: 1px solid g;
+
+@media screen and (max-width: 1400px) {
+    .media {
+        width:300px !important;
+        height:270px !important;
+    }
 }
 /* end  */
 
+/* depression */
+.ment-box {
+    margin-top: 210px;
+}
 
 
