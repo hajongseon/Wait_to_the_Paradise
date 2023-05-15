@@ -45,6 +45,10 @@ a {
     border-radius: 50px !important;
 }
 
+.b-shadow {
+    box-shadow: 3px 3px 3px lightgray;
+}
+
 
 .select_hover:hover {
     background:rgba(248, 249, 250);
@@ -154,6 +158,15 @@ button {
     }
 }
 /* end  */
+/* index */
+.min-size {
+    transition: 0.8s;
+}
+
+.min-size:hover {
+    color:black;
+    transform: scale(0.94);
+}
 
 /* depression */
 .ment-box {
