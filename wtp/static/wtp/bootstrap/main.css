@@ -42,7 +42,7 @@ a {
 .b-white {
     background:#ffffff;
     border: 1px solid rgba(39, 40, 44, .2);
-    border-radius: 10px;
+    border-radius: 50px !important;
 }
 
 
@@ -160,4 +160,21 @@ button {
     margin-top: 210px;
 }
 
+#book-box {
+    border: 1px solid black;
+    margin: auto;
+    width: 700px;
+    background-color: white;
+    padding: 20px;
+    text-align: center !important;
+}
 
+.book-img {
+  width: 150px;
+  height: 200px;
+  margin: 10px;
+  display: inline-block;
+}
+
+
+/* F8F8FF */

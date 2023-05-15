@@ -13,19 +13,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static '/wtp/bootstrap/main.css' %}">
+    <link rel="stylesheet" href="{% static '/wtp/img/background.png' %}">
 </head>
-<body>
+<body style="background:url({% static '/wtp/img/background4.png' %}); background-repeat:no-repeat; background-size:cover">
     <!-- navbar  -->
       {% include 'wtp_open/navbar.html' %}
-    <div class="container">
-        <div class="ment-box">
-            <h3 style="width:500px; text-align:center;">멘트</h3>
+    <div id="carouselExampleFade" class="carousel slide carousel-fade p-3 m-0 border-0 bd-example" style="width:500px; margin:0 auto;">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="bd-placeholder-img w-100" style="background-image: url(고양이.jpg); height:400px; margin: 0 auto; text-align: center; line-height: 400px;">
+                <img class="mr-1" src="magic(150x210).png">
+                <img src="magic(150x210).png">
+            </div>
         </div>
-
-        <div class="book-box">
-
+        <div class="carousel-item">
+            <div class="bd-placeholder-img w-100" style="background-image: url(고양이.jpg); height:400px; margin: 0 auto; text-align: center; line-height: 400px;">
+                <img src="불닭맨.JPG" style="width:150px; height:210px;">
+            </div>
         </div>
+        <div class="carousel-item">
+            <div class="bd-placeholder-img w-100" style="background-image: url(고양이.jpg); height:400px; margin: 0 auto; text-align: center; line-height: 400px;">
+                <img src="연습/카페.jpg" style="width:150px; height:210px;">
+            </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
+<!--    <div class="container">-->
+<!--        <div class="ment-box">-->
+<!--            <h3 style="width:500px; text-align:center;">멘트</h3>-->
+<!--        </div>-->
+
+<!--        <div id="book-box" style="border:1px solid black; text-align: center;  background: linear-gradient(to bottom, #F8F8FF, #D3D3D3);">-->
+<!--            <img class="book-img" src="" alt="책이미지"/>-->
+<!--            <img class="book-img" src="" alt="책이미지"/>-->
+<!--            <img class="book-img" src="" alt="책이미지"/>-->
+<!--            <img class="book-img" src="" alt="책이미지"/>-->
+<!--        </div>-->
+<!--    </div>-->
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
