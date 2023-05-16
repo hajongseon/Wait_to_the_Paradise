@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'board/bootstrap/bootstrap.min.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'board/bootstrap/jquery-3.7.0.min.js' %}" media="screen">
+    <script src="https://kit.fontawesome.com/2d16194314.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/20f2b02ec6.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+            integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+<!--번호입력하면 이동하는태그-->
+<form method="GET" class="d-flex justify-content-center">
+    <input type="number" name="page" min="1" max="{{ page_obj.paginator.num_pages }}">
+    <input type="submit" value="Go">
+</form>
+<br/>
+<!-- 페이징처리 시작 -->
+<ul class="pagination justify-content-center">
+    <!-- 맨 처음 -->
+    {% if page_obj.has_previous %}
+    <li class="page-item">
+        <a class="page-link" href="?page=1" aria-label="first">
+            <span aria-hidden="true">처음으로</span>
+        </a>
+    </li>
+    {% else %}
+    <li class="page-item disabled">
+        <span class="page-link" aria-hidden="true">처음으로</span>
+    </li>
+    {% endif %}
+    <!-- 이전페이지 -->
+    {% if page_obj.has_previous %}
+    <li class="page-item">
+        <a class="page-link" href="?page={{ page_obj.previous_page_number }}">이전</a>
+    </li>
+    {% else %}
+    <li class="page-item disabled">
+        <a class="page-link" tabindex="-1" aria-disabled="true" href="#">이전</a>
+    </li>
+    {% endif %}
+    <!-- 페이지리스트 -->
+    {% for page_number in page_obj.paginator.page_range %}
+    {% if page_number >= page_obj.number|add:0 and page_number <= page_obj.number|add:10 %}
+    {% if page_number == page_obj.number %}
+    <li class="page-item active" aria-current="page">
+        <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a>
+    </li>
+    {% else %}
+    <li class="page-item">
+        <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a>
+    </li>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    <!-- 다음페이지 -->
+    {% if page_obj.has_next %}
+    <li class="page-item">
+        <a class="page-link" href="?page={{ page_obj.next_page_number }}">다음</a>
+    </li>
+    {% else %}
+    <li class="page-item disabled">
+        <a class="page-link" tabindex="-1" aria-disabled="true" href="#">다음</a>
+    </li>
+    {% endif %}
+    <!-- 맨 마지막 -->
+    {% if page_obj.has_next %}
+    <li class="page-item">
+        <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" aria-label="last">
+            <span aria-hidden="true">끝으로</span>
+        </a>
+    </li>
+    {% else %}
+    <li class="page-item disabled">
+        <span class="page-link" aria-hidden="true">끝으로</span>
+    </li>
+    {% endif %}
+</ul>
+
+<!-- 페이징처리 끝 -->
+
+</body>

@@ -1,0 +1,47 @@
+{% extends 'board/base.html' %}
+
+{% block main_area %}
+
+{% if user.is_authenticated %}
+{% if user.is_superuser or user.is_staff %}
+<a class="btn btn-info btn-sm float-end" href="/board/create_post/" role="button">
+    <i class="fas fa-pen"></i>&nbsp;&nbsp;New Post</a>
+{% endif %}
+{% endif %}
+
+
+<h1>
+    Blog
+    {% if category %}<span class="badge bg-success">{{ category }}</span>{% endif %}
+</h1>
+{% if post_list.exists %}
+{% for p in post_list %}
+<!-- Blog post-->
+<div class="card mb-4" id="post-{{ p.pk }}">
+    <div class="card-body">
+        <div class="small text-muted">{{ p.created_at }}</div>
+        {% if p.category %}
+        <span class="badge text-bg-success float-end">{{ p.category }}</span>
+        {% else %}
+        <span class="badge text-bg-success float-end">미분류</span>
+        {% endif %}
+        <h2 class="card-title h4">{{ p.title }}</h2>
+        <p class="card-text">{{ p.get_content_markdown | truncatewords_html:10 | safe }}</p>
+        <a href="#">{{ p.author | upper }}</a>
+        <a href="{{ p.get_absolute_url }}" class="btn btn-primary">Read more →</a>
+    </div>
+</div>
+{% endfor %}
+{% else %}
+<h3>아직 게시물이 없습니다.</h3>
+{% endif %}
+
+
+{% if is_paginated %}
+<!-- 페이지네이션 컨텍스트 정의 시작 -->
+  {% with page_obj.paginator as paginator %}
+    {% include 'board/pagination.html' %}
+  {% endwith %}
+<!-- 페이지네이션 컨텍스트 정의 끝 -->
+{% endif %}
+{% endblock %}

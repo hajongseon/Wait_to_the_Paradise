@@ -1,0 +1,93 @@
+{% load socialaccount %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'board/bootstrap/bootstrap.min.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'board/bootstrap/bootstrap.min.css.map' %}" media="screen">
+    <script src="https://kit.fontawesome.com/20f2b02ec6.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/">Wait to The Paradise</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="/board/">게시판</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">처음으로</a></li>
+            </ul>
+            <ul class="navbar-nav mr-auto">
+                {% if user.is_authenticated %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        {% if user.socialaccount_set.all.0.get_avatar_url %}
+                        <img class="rounded-circle" width="25px" src="{{ user.socialaccount_set.all.0.get_
+                                avatar_url }}" alt="">
+                        {% else %}
+                        <img class="rounded-circle" width="40px"
+                             src="https://doitdjango.com/avatar/id/1531/97ee52e1a408f085/svg/{{ user.email }}">
+                        {% endif %}
+                        &nbsp;
+                        {{ user.username }}
+                    </a>
+                    <ul class="dropdown-menu" aria-label="">
+                        <li><a class="dropdown-item" href="/accounts/logout/">Log out</a></li>
+                    </ul>
+                </li>
+            </ul>
+            {% else %}
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+
+    <!-- login modal-->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="loginModalLabel"><i class="fas fa-sign-in-alt"></i>&nbsp; Log In
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <a role="button" class="btn btn-danger" href="{% provider_login_url 'google' %}">
+                                <i class="fa-brands fa-google"></i>&nbsp;&nbsp; Log in with Google</a>
+                            <a role="button" class="btn btn-primary"
+                               href="/accounts/login/"><i class="fa-sharp fa-regular fa-envelope"></i>&nbsp;&nbsp;Log in
+                                with
+                                E-mail
+                            </a>
+                        </div>
+                        <div class="col-lg-6">
+                            <a role="button" type="button" class="btn btn-warning"
+                               href="/accounts/signup/"><i class="far fa-smile-wink"></i>&nbsp;&nbsp; Sign up with
+                                E-mail
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+</body>

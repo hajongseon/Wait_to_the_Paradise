@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+
+    <title>{% block head_title %}Blog{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'board/bootstrap/bootstrap.min.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'board/bootstrap/bootstrap.min.css.map' %}" media="screen">
+    <script src="https://kit.fontawesome.com/20f2b02ec6.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'board/bootstrap/main.css' %}">
+    <script src="https://kit.fontawesome.com/20f2b02ec6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Responsive navbar-->
+{% include 'board/navbar.html' %}
+
+<!-- Page content-->
+<div class="container my-3">
+    <div class="row">
+        <!-- Blog entries-->
+        <div class="col-lg-12 bg-light border-bottom mb-4" id="main-area">
+            {% block main_area %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+</body>
+</html>
