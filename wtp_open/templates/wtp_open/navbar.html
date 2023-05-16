@@ -1,0 +1,105 @@
+{% load socialaccount %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'wtp_open/bootstrap/bootstrap.min.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'wtp_open/bootstrap/bootstrap.min.css.map' %}" media="screen">
+    <script src="https://kit.fontawesome.com/20f2b02ec6.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary p-3" style="background:#FFFFFF; box-shadow: 3px 1px 3px gray" >
+      <div class="container container-fluid">
+        <a class="navbar-nav navbar-brand me-auto me-4 " style="color:#2C3E50; font-family: 'Roboto Slab' , serif; font-size: 1.8rem; text-shadow: 1px 1px 1px gray;" href="/wtp">Wait to The Faradise</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item px-3">
+              <a class="text-decoration-none icon" href="#" style="color:#2C3E50;" data-bs-toggle="modal" data-bs-target="#SignUpModal">
+                <i class="fas fa-user-plus"></i>
+                 <!-- 회원가입 -->
+              </a>
+            </li>
+            <li class="nav-item" style="color:#2C3E50;"> | </li>
+            <li class="nav-item px-3 text-white">
+              <a class="text-decoration-none icon" href="#" style="color:#2C3E50;" data-bs-toggle="modal" data-bs-target="#LoginModal">
+                <i class="fas fa-sign-in-alt"></i>
+                 <!-- 로그인 -->
+              </a>
+            </li>
+            <li class="nav-item" style="color:#2C3E50;"> | </li>
+            <li class="nav-item px-3">
+              <a class="text-decoration-none icon" href="/board/" style="color:#2C3E50;">
+                <i class="fas fa-chalkboard-teacher"></i>
+                 <!-- 게시판 -->
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<!-- Modal Sign up -->
+<div class="modal" id="SignUpModal" tabindex="-1" aria-labelledby="SignUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="SignUpModalLabel">Sign Up</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a type="button" class="btn btn-outline-warning btn-md mb-2 btn-block"
+                                   href="/accounts/signup/"><i class="far fa-smile-wink"></i> Sign Up with E-mail
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Login -->
+<div class="modal" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="LoginModalLabel">Login</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a type="button" class="btn btn-outline-danger btn-md mb-3 btn-block"
+                           href="{% provider_login_url 'google' %}"><i class="fa-brands fa-google"></i> Log in with Google
+                        </a>
+                        <a type="button" class="btn btn-outline-success btn-md mb-3 btn-block" href="/accounts/login/"><i
+                                class="far fa-envelope" ></i> Log in with E-mail
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>

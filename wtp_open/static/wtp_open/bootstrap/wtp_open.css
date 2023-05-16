@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black !important;
+}
+
+h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+h1:hover {
+    background-color: lightgray;
+    border-radius: 10px;
+    transition: ease 0.3s;
+}
+
+.fade-in {
+    animation: fadeIn 4s ease-in forwards;
+}
+
+.fade-out {
+    animation: fadeOut 2s 0.2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+}
