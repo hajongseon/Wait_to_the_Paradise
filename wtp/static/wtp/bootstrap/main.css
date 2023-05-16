@@ -68,7 +68,6 @@ a {
     grid-template-rows: 300px 300px;
     grid-gap: 10px;
     align-items:end;
-    /* border: 1px solid gray; */
 }
 
 .h-200 {
@@ -191,3 +190,18 @@ button {
 
 
 /* F8F8FF */
+
+/* gender_select */
+.grid-sub-gender {
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
+}
+
+.auto-gender {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width: 372px;
+    height: 500px;
+    margin: 0 auto;
+}
