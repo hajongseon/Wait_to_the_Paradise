@@ -4,8 +4,8 @@ EDIT ON
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&family=Roboto+Slab:wght@900&family=Roboto:wght@300&display=swap');
 /* .bg{
-  background: #fff;;  
-} 
+  background: #fff;;
+}
 $text: #382b22;
 $light-pink: #fff0f0;
 $pink: #ffe9e9;
@@ -42,7 +42,11 @@ a {
 .b-white {
     background:#ffffff;
     border: 1px solid rgba(39, 40, 44, .2);
-    border-radius: 10px;
+    border-radius: 50px !important;
+}
+
+.b-shadow {
+    box-shadow: 3px 3px 3px lightgray;
 }
 
 
@@ -64,7 +68,17 @@ a {
     grid-template-rows: 300px 300px;
     grid-gap: 10px;
     align-items:end;
-    /* border: 1px solid gray; */
+}
+
+.z-0 {
+    position: absolute;
+    z-index:0;
+    opacity:0;
+}
+
+#div1 {
+    z-index:3;
+    opacity:1;
 }
 
 .h-200 {
@@ -154,10 +168,69 @@ button {
     }
 }
 /* end  */
+/* index */
+.min-size {
+    transition: 0.8s;
+}
+
+.min-size:hover {
+    color:black;
+    transform: scale(0.94);
+}
 
 /* depression */
 .ment-box {
     margin-top: 210px;
 }
 
+#book-box {
+    border: 1px solid black;
+    margin: auto;
+    width: 700px;
+    background-color: white;
+    padding: 20px;
+    text-align: center !important;
+}
 
+.book-img {
+  width: 150px;
+  height: 200px;
+  margin: 10px;
+  display: inline-block;
+}
+
+
+/* F8F8FF */
+
+/* gender_select */
+.grid-sub-gender {
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
+}
+
+.auto-gender {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width: 372px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+/* ------ */
+.myDiv {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        width: 200px;
+        height: 200px;
+        background-color: #ccc;
+        border: 1px solid #000;
+        opacity: 0;
+        z-index: 0;
+        }
+
+        #div1 {
+        z-index: 3;
+        opacity: 1;
+        }

@@ -15,7 +15,7 @@
 
 
 </head>
-<body>
+<body style="background:url({% static '/board/img/background4.png' %}); background-repeat:no-repeat; background-size:cover;">
 
 <!-- Responsive navbar-->
 {% include 'board/navbar.html' %}
@@ -24,7 +24,7 @@
 <div class="container my-3">
     <div class="row">
         <!-- Blog entries-->
-        <div class="col-lg-8 bg-light border-bottom mb-4" id="main-area">
+        <div class="col-lg-8 bg-light border-bottom mb-4" id="main-area" style="border-radius:10px;">
             {% block main_area %}
             {% endblock %}
         </div>

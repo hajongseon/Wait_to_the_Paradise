@@ -14,16 +14,16 @@
 
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg bg-body-tertiary p-3 text-white" style="background:#BFCAE3; box-shadow: 3px 1px 3px gray">
     <div class="container">
-        <a class="navbar-brand" href="/">Wait to The Paradise</a>
+        <a class="navbar-nav navbar-brand me-auto me-4 " style="color:#FFFFFF; font-family: 'Roboto Slab' , serif; font-size: 1.8rem; text-shadow: 1px 1px 1px gray;" href="/">Wait to The Paradise</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
                 class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link" href="/board/">게시판</a></li>
-                <li class="nav-item"><a class="nav-link" href="/">처음으로</a></li>
+                <li class="nav-item px-3"><a class="text-decoration-none icon" style="color:#FFFFFF; font-weight:bold; line-height:40px;" href="/board/">게시판</a></li>
+                <li class="nav-item px-3"><a class="text-decoration-none icon" style="color:#FFFFFF; font-weight:bold; line-height:40px;" href="/wtp/">처음으로</a></li>
             </ul>
             <ul class="navbar-nav mr-auto">
                 {% if user.is_authenticated %}
@@ -47,8 +47,8 @@
             </ul>
             {% else %}
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a>
+                <li class="nav-item px-3">
+                    <a class="text-decoration-none icon" style="color:#FFFFFF; font-weight:bold; line-height:40px;" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a>
                 </li>
                 {% endif %}
             </ul>
