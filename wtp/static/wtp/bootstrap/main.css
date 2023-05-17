@@ -70,6 +70,17 @@ a {
     align-items:end;
 }
 
+.z-0 {
+    position: absolute;
+    z-index:0;
+    opacity:0;
+}
+
+#div1 {
+    z-index:3;
+    opacity:1;
+}
+
 .h-200 {
     height: 240px;
 }
@@ -205,3 +216,21 @@ button {
     height: 500px;
     margin: 0 auto;
 }
+
+/* ------ */
+.myDiv {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        width: 200px;
+        height: 200px;
+        background-color: #ccc;
+        border: 1px solid #000;
+        opacity: 0;
+        z-index: 0;
+        }
+
+        #div1 {
+        z-index: 3;
+        opacity: 1;
+        }

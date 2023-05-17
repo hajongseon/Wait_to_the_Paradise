@@ -26,12 +26,16 @@ def wtp_list(request):
 class Depression(ListView):
     model = Post
     template_name = 'wtp/depression.html'
-class Bad(ListView):
+class Gender(ListView):
     model = Post
-    template_name = 'wtp/bad.html'
+    template_name = 'wtp/gender.html'
 class Fine(ListView):
     model = Post
     template_name = 'wtp/fine.html'
 class Good(ListView):
     model = Post
     template_name = 'wtp/good.html'
+
+class Age(ListView):
+    model = Post
+    template_name = 'wtp/age.html'
