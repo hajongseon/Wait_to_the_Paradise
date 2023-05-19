@@ -217,20 +217,25 @@ button {
     margin: 0 auto;
 }
 
-/* ------ */
-.myDiv {
-        position: absolute;
-        top: 50px;
-        left: 50px;
-        width: 200px;
-        height: 200px;
-        background-color: #ccc;
-        border: 1px solid #000;
-        opacity: 0;
-        z-index: 0;
-        }
+/* body */
+bg-body {
+    background-repeat:no-repeat;
+    background-size:cover;
+    height:100vh;
+}
 
-        #div1 {
-        z-index: 3;
-        opacity: 1;
-        }
+/* board.html */
+.btn-w-190 {
+    width:190px;
+    margin-top:10px;
+}
+
+.btn-close-1 {
+    background:#BFCAE3;
+    font-weight:bold;
+}
+
+.btn-close-1:hover {
+    background:#b3bed6;
+    transition: 0.3s
+}

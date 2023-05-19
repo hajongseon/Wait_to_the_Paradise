@@ -7,6 +7,7 @@ urlpatterns = [
     # path('depression', views.Depression.as_view()),
     path('gender', views.Gender.as_view()),
     path('age', views.Age.as_view()),
+    path('book', views.Book.as_view()),
     # path('fine', views.Fine.as_view()),
     # path('good', views.Good.as_view()),
 

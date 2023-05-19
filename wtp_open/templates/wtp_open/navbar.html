@@ -34,7 +34,7 @@
     </nav>
 
 <!-- Modal Sign up -->
-<div class="modal" id="SignUpModal" tabindex="-1" aria-labelledby="SignUpModalLabel" aria-hidden="true">
+<div class="modal fade" id="SignUpModal" tabindex="-1" aria-labelledby="SignUpModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -53,24 +53,25 @@
                     </div>
                 </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background:#BFCAE3; border:none;">Close</button>
+                <button type="button" class="btn text-white btn-close-1" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
 </div>
 
 <!-- Modal Login -->
-<div class="modal" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+<div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="LoginModalLabel">Login</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+
         <div class="modal-content">
             <div class="modal-body text-center">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12" style="display:flex; justify-content:space-around;">
                         <a role="button" class="btn btn-outline-danger btn-md mb-3 btn-block" href="{% provider_login_url 'google' %}"><i
                                 class="fab fa-google"></i> Log in with Google
                         </a>
@@ -82,7 +83,7 @@
             </div>
         </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background:#BFCAE3; border:none;">Close</button>
+                <button type="button" class="btn text-white btn-close-1" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

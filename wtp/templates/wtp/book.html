@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/wtp/bootstrap/bootstrap.min.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static '/wtp/bootstrap/bootstrap.min.css.map' %}" media="screen">
+    <script src="https://kit.fontawesome.com/20f2b02ec6.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/wtp/bootstrap/main.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+<!--    아래 부트스트립 링크를 삭제하면 네비바 살아남 ㅎㅎ..-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="{% static '/wtp/bootstrap/jquery.min.js' %}"></script>
+</head>
+
+<body style="background:url({% static '/wtp/img/background4.png' %}); background-repeat:no-repeat; background-size:cover; height:100vh;">
+
+<header class="fixed">
+    <!-- navbar  -->
+    {% include 'wtp_open/navbar.html' %}
+</header>
+<!-- height값을 줘서 밑에 몇번째인지 알 수 있는 바 높이조정 -->
+    <div id="carouselExampleIndicators" class="carousel slide book-container-p" style="margin-top:111px;">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+
+        <!-- 이미지 간격조정 -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <!-- height값 줘야함 -->
+            <div class="book-container">
+                <div><img src="http://image.yes24.com/goods/118795019/XL" class="d-block book-img" alt="..."></div>
+                <div><img src="http://image.yes24.com/goods/118691393/XL" class="d-block book-img" alt="..."></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="book-container">
+                <div><img src="http://image.yes24.com/goods/106734353/XL" class="d-block book-img" alt="..."></div>
+                <div><img src="http://image.yes24.com/goods/118711426/XL" class="d-block book-img" alt="..."></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="book-container">
+                <div><img src="http://image.yes24.com/goods/118804775/XL" class="d-block book-img" alt="..."></div>
+                <div><img src="http://image.yes24.com/goods/118714796/XL" class="d-block book-img" alt="..."></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="book-container">
+                <div><img src="http://image.yes24.com/goods/117188211/XL" class="d-block book-img" alt="..."></div>
+                <div><img src="http://image.yes24.com/goods/118688440/XL" class="d-block book-img" alt="..."></div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!--modal창-->
+    <div class="book-modal">
+        <button class="modal-btn">&times;</button>
+        <div class="modalBox">
+            dddd
+        </div>
+    </div>
+</body>
+<script>
+        $(function(){
+        $("img").click(function(){
+            $(".book-modal").show();
+            var imgSrc = $(this).children("img").attr("src");
+            var imgAlt = $(this).children("img").attr("alt");
+            $(".modalBox img").attr("src", imgSrc);
+            $(".modalBox img").attr("alt", imgAlt);
+
+            var imgTit =  $(this).children("p").text();
+            $(".modalBox p").text(imgTit);
+
+            //$(".modalBox p").text(imgAlt);
+        });
+
+        $(".book-modal button").click(function(){
+            $(".book-modal").hide();
+        });
+
+        $(".book-modal").click(function (e) {
+        if (e.target.className != "modal") {
+        return false;
+        } else {
+        $(".book-modal").hide();
+        }
+    });
+    });
+ </script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+</html>
