@@ -1,3 +1,4 @@
+{% load socialaccount %}
 <nav class="navbar navbar-expand-lg bg-body-tertiary p-3 text-white" style="background:#BFCAE3; box-shadow: 3px 1px 3px gray" >
       <div class="container container-fluid">
         <a class="navbar-nav navbar-brand me-auto me-4 " style="color:#FFFFFF; font-family: 'Roboto Slab' , serif; font-size: 1.8rem; text-shadow: 1px 1px 1px gray;" href="/wtp">Wait to The Paradise</a>
@@ -22,7 +23,7 @@
             </li>
             <li class="nav-item" style="color:#F8F8FF; font-weight:bold;"> | </li>
             <li class="nav-item px-3">
-              <a class="text-decoration-none icon" href="#" style="color:#FFFFFF;">
+              <a class="text-decoration-none icon" href="/board/" style="color:#FFFFFF;">
                 <i class="fas fa-chalkboard-teacher"></i>
                  <!-- 게시판 -->
               </a>
@@ -33,7 +34,7 @@
     </nav>
 
 <!-- Modal Sign up -->
-<div class="modal" id="SignUpModal" tabindex="-1" aria-labelledby="SignUpModalLabel" aria-hidden="true">
+<div class="modal fade" id="SignUpModal" tabindex="-1" aria-labelledby="SignUpModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -44,44 +45,45 @@
                     <div class="modal-body text-center">
                         <div class="row">
                             <div class="col-md-12">
-                                <button type="button" class="btn btn-outline-warning btn-md mb-2 btn-block"><i
+                                <a role="button" class="btn btn-outline-warning btn-md mb-2 btn-block" href="/accounts/signup/"><i
                                         class="far fa-envelope"></i> Sign Up with E-mail
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn text-white btn-close-1" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
 </div>
 
 <!-- Modal Login -->
-<div class="modal" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+<div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="LoginModalLabel">Login</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+
         <div class="modal-content">
             <div class="modal-body text-center">
                 <div class="row">
-                    <div class="col-md-12">
-                        <button type="button" class="btn btn-outline-danger btn-md mb-3 btn-block"><i
+                    <div class="col-md-12" style="display:flex; justify-content:space-around;">
+                        <a role="button" class="btn btn-outline-danger btn-md mb-3 btn-block" href="{% provider_login_url 'google' %}"><i
                                 class="fab fa-google"></i> Log in with Google
-                        </button>
-                        <button type="button" class="btn btn-outline-success btn-md mb-3 btn-block"><i
-                                class="far fa-envelope"></i> Log in with E-mail
-                        </button>
+                        </a>
+                        <a role="button" class="btn btn-outline-success btn-md mb-3 btn-block" href="/accounts/signup/"><i
+                                class="far fa-envelope" ></i> Log in with E-mail
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn text-white btn-close-1" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

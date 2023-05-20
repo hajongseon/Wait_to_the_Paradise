@@ -6686,7 +6686,7 @@ fieldset:disabled .btn {
     margin-right: -100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    transition: transform .6s ease-in-out
+    transition: transform .6s ease-in
 }
 
 @media (prefers-reduced-motion:reduce) {
@@ -6728,7 +6728,7 @@ fieldset:disabled .btn {
 .carousel-fade .active.carousel-item-start {
     z-index: 0;
     opacity: 0;
-    transition: opacity 0s .6s
+    transition: opacity 0s .1s
 }
 
 @media (prefers-reduced-motion:reduce) {
@@ -6739,7 +6739,7 @@ fieldset:disabled .btn {
     }
 }
 
-/* .carousel-control-next,
+.carousel-control-next,
 .carousel-control-prev {
     position: absolute;
     top: 0;
@@ -6755,8 +6755,8 @@ fieldset:disabled .btn {
     background: 0 0;
     border: 0;
     opacity: .5;
-    transition: opacity .15s ease
-} */
+    transition: opacity .3s ease
+}
 
 @media (prefers-reduced-motion:reduce) {
 
