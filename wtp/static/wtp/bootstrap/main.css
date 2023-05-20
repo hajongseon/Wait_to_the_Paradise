@@ -301,3 +301,20 @@ bg-body-h {
 .modalBox img {
 	width: 100%;
 }
+
+/* book.html - modal */
+.book-title {
+    font-weight:bold;
+}
+
+.book-ul {
+    text-align:center;
+    display:flex;
+    color:#666;
+}
+
+.book-li {
+    font-size:12px;
+    list-style:none;
+    margin-right:30px;
+}
