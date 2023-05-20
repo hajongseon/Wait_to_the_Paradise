@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'wtp',
     'wtp_open',
     'board',
+    'user',
     'markdownx',
     'crispy_forms',
     'crispy_bootstrap5',
@@ -87,8 +88,12 @@ WSGI_APPLICATION = 'wait_to_the_paradise.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'wtp',
+        'USER':'root',
+        'PASSWORD':'1234',
+        'HOST':'localhost',
+        'PORT':'3306',
     }
 }
 
